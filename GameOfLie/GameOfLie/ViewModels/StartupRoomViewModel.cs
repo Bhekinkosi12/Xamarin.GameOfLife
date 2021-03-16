@@ -16,7 +16,9 @@ namespace GameOfLie.ViewModels
 
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
+        
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        
         }
 
         public StartupRoomViewModel(ContentPage masterPage)
@@ -58,7 +60,9 @@ namespace GameOfLie.ViewModels
         {
             get
             {
+            
                 return _navigateToGame ?? (_navigateToGame = new Command(async () => await ExecuteNavigationCommand()));
+            
             }
         }
 
